@@ -1,0 +1,24 @@
+{
+  "Navbar": {
+    "home": "ACCUEIL",
+    "shows": "SPECTACLES",
+    "music": "MUSIQUE",
+    "about": "À PROPOS"
+  },
+  "Hero": {
+    "subtitle": "Nouveau single \"J'veux la plus belle vie du monde\" Disponible",
+    "listen": "Écouter",
+    "tour": "Tournée"
+  },
+  "Home": {
+    "upcomingShows": "Spectacles à venir",
+    "latestReleases": "Dernières Sorties",
+    "tickets": "Billets",
+    "stream": "Écouter",
+    "noShows": "Aucun spectacle annoncé pour le moment.",
+    "noReleases": "Aucune sortie trouvée."
+  },
+  "Footer": {
+    "rights": "Tous droits réservés."
+  }
+}

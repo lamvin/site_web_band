@@ -1,0 +1,24 @@
+{
+    "Navbar": {
+        "home": "HOME",
+        "shows": "SHOWS",
+        "music": "MUSIC",
+        "about": "ABOUT"
+    },
+    "Hero": {
+        "subtitle": "New Single <br>\"J'veux la plus belle vie du monde\" <br>Out Now",
+        "listen": "Listen Now",
+        "tour": "Tour Dates"
+    },
+    "Home": {
+        "upcomingShows": "Upcoming Shows",
+        "latestReleases": "Latest Releases",
+        "tickets": "Tickets",
+        "stream": "Stream Now",
+        "noShows": "No upcoming shows announced.",
+        "noReleases": "No releases found."
+    },
+    "Footer": {
+        "rights": "All rights reserved."
+    }
+}
