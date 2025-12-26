@@ -20,7 +20,7 @@ if ($currentBranch -ne "main") {
 # 3. Add and Commit any remaining changes
 Write-Host "Checking for uncommitted changes..."
 git add .
-git commit -m "Deployment fix"
+git commit -m "Fix layout params type for Next.js build"
 
 # 4. Push
 Write-Host "Pushing to GitHub..."
