@@ -23,13 +23,13 @@ export default function Hero() {
                     THÉRAPIE<br />CLUB
                 </h1>
 
-                <p className="text-xl md:text-2xl text-grenadine mb-8 max-w-2xl mx-auto font-bold tracking-widest uppercase">
+                <p className="text-xl md:text-2xl text-purple-950 mb-8 max-w-2xl mx-auto font-black tracking-widest uppercase drop-shadow-sm">
                     {t.rich('subtitle', {
                         br: () => <br />
                     })}
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                    <button className="px-8 py-3 bg-grenadine text-beeswax font-black uppercase tracking-widest hover:bg-cafelatte hover:text-white transition transform hover:scale-105 shadow-lg">
+                    <button className="px-8 py-3 bg-purple-950 text-pastel-purple border-4 border-purple-950 font-black uppercase tracking-widest hover:bg-pastel-purple hover:text-purple-950 transition transform hover:scale-105 shadow-lg">
                         {t('listen')}
                     </button>
                     <button className="px-8 py-3 bg-pastel-purple text-purple-950 border-4 border-purple-950 font-black uppercase tracking-widest hover:bg-purple-950 hover:text-pastel-purple transition transform hover:scale-105 shadow-lg">

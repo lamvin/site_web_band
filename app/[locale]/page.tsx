@@ -84,7 +84,7 @@ export default async function Home() {
               />
               <div className="absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300 z-10 bg-cafelatte/80 p-6">
                 <h3 className="text-3xl font-black uppercase mb-4 text-center text-beeswax font-display leading-none">Cash Flow</h3>
-                <a href="#" className="bg-grenadine text-beeswax px-8 py-3 rounded-none font-black uppercase tracking-widest hover:bg-beeswax hover:text-cafelatte transition-colors border-2 border-beeswax">{t('stream')}</a>
+                <a href="#" className="bg-purple-950 text-pastel-purple px-8 py-3 rounded-none font-black uppercase tracking-widest hover:bg-pastel-purple hover:text-purple-950 transition-colors border-2 border-purple-950">{t('stream')}</a>
               </div>
             </div>
             {albums.length > 0 ? (
@@ -100,7 +100,7 @@ export default async function Home() {
                   )}
                   <div className="absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300 z-10 bg-cafelatte/80 p-6">
                     <h3 className="text-3xl font-black uppercase mb-4 text-center text-beeswax font-display leading-none">{album.title}</h3>
-                    <a href={album.spotifyLink} target="_blank" className="bg-grenadine text-beeswax px-8 py-3 rounded-none font-black uppercase tracking-widest hover:bg-beeswax hover:text-cafelatte transition-colors border-2 border-beeswax">{t('stream')}</a>
+                    <a href={album.spotifyLink} target="_blank" className="bg-purple-950 text-pastel-purple px-8 py-3 rounded-none font-black uppercase tracking-widest hover:bg-pastel-purple hover:text-purple-950 transition-colors border-2 border-purple-950">{t('stream')}</a>
                   </div>
                 </div>
               ))
