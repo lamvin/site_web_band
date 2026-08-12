@@ -8,31 +8,20 @@ export default function Hero() {
         <div className="relative h-screen flex items-center justify-center overflow-hidden bg-darlington">
             {/* Background with overlay */}
             <div className="absolute inset-0 z-0">
-                <div className="absolute inset-0 bg-gradient-to-b from-darlington to-beeswax opacity-80 z-10" />
-                {/* Placeholder for band image */}
-                <div className="w-full h-full bg-cover bg-center flex items-center justify-center text-cafelatte/20 text-9xl font-bold font-display">
-                    {/* Fallback pattern/noise can be added later */}
-                </div>
+                <Image
+                    src="/images/band/TC cover.jpg"
+                    alt="TC Cover"
+                    fill
+                    className="object-cover object-center"
+                    priority
+                />
+                <div className="absolute inset-0 bg-gradient-to-b from-darlington/80 via-darlington/50 to-beeswax/80 z-10" />
             </div>
 
             <div className="relative z-20 text-center px-4">
                 <h1 className="text-6xl md:text-8xl font-black text-cafelatte tracking-tighter mb-4 animate-in fade-in zoom-in duration-1000 font-display drop-shadow-sm">
-                    BAIE DES<br />CHALEURS
+                    THÉRAPIE<br />CLUB
                 </h1>
-
-                {/* Band Members Pixel Art - 6 Columns */}
-                <div className="flex justify-center items-end gap-2 md:gap-4 mb-8 overflow-hidden">
-                    {[1, 2, 3, 4, 5, 6].map((num) => (
-                        <div key={num} className="relative w-16 h-16 md:w-24 md:h-24 hover:-translate-y-2 transition-transform duration-300">
-                            <Image
-                                src={`/images/band/membre${num}.png`}
-                                alt={`Band Member ${num}`}
-                                fill
-                                className="object-contain"
-                            />
-                        </div>
-                    ))}
-                </div>
 
                 <p className="text-xl md:text-2xl text-grenadine mb-8 max-w-2xl mx-auto font-bold tracking-widest uppercase">
                     {t.rich('subtitle', {
@@ -51,3 +40,4 @@ export default function Hero() {
         </div>
     );
 }
+

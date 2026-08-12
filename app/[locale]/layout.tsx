@@ -17,8 +17,8 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Baie des Chaleurs | Official Website",
-  description: "Official website of Baie des Chaleurs",
+  title: "Thérapie Club | Official Website",
+  description: "Official website of Thérapie Club",
 };
 
 export default async function RootLayout({

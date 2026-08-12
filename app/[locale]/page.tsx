@@ -78,12 +78,12 @@ export default async function Home() {
             <div className="group relative aspect-[2/3] bg-cafelatte shadow-[8px_8px_0px_0px_rgba(233,167,82,1)] border-4 border-cafelatte">
               <Image
                 src="/images/band/album_cover.png"
-                alt="J'veux la plus belle vie du monde"
+                alt="Cash Flow"
                 fill
                 className="object-cover transition duration-500"
               />
               <div className="absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300 z-10 bg-cafelatte/80 p-6">
-                <h3 className="text-3xl font-black uppercase mb-4 text-center text-beeswax font-display leading-none">J'veux la plus belle vie du monde</h3>
+                <h3 className="text-3xl font-black uppercase mb-4 text-center text-beeswax font-display leading-none">Cash Flow</h3>
                 <a href="#" className="bg-grenadine text-beeswax px-8 py-3 rounded-none font-black uppercase tracking-widest hover:bg-beeswax hover:text-cafelatte transition-colors border-2 border-beeswax">{t('stream')}</a>
               </div>
             </div>
@@ -112,7 +112,7 @@ export default async function Home() {
       </section>
 
       <footer className="py-12 text-center text-beeswax border-t-4 border-beeswax bg-cafelatte">
-        <p className="font-bold uppercase tracking-widest">&copy; {new Date().getFullYear()} Baie des Chaleurs. {tFooter('rights')}</p>
+        <p className="font-bold uppercase tracking-widest">&copy; {new Date().getFullYear()} Thérapie Club. {tFooter('rights')}</p>
       </footer>
     </main>
   );
