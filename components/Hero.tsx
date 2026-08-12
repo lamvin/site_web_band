@@ -6,8 +6,8 @@ export default function Hero() {
 
     return (
         <div className="relative min-h-screen pt-36 flex items-center justify-center overflow-hidden bg-darlington">
-            {/* Background with overlay positioned below navbar */}
-            <div className="absolute inset-0 top-36 z-0">
+            {/* Background with overlay extending full screen under transparent navbar */}
+            <div className="absolute inset-0 z-0">
                 <Image
                     src="/images/band/TC cover.jpg"
                     alt="TC Cover"
