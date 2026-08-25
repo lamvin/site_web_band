@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Syne, Inter } from "next/font/google";
+import { Syne, Inter, Pacifico, Kaushan_Script, Caveat } from "next/font/google";
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages } from 'next-intl/server';
 import "../globals.css";
@@ -15,6 +15,27 @@ const inter = Inter({
   variable: "--font-body",
   display: 'swap',
 });
+
+const pacifico = Pacifico({
+  weight: "400",
+  subsets: ["latin"],
+  variable: "--font-pacifico",
+  display: 'swap',
+});
+
+const kaushan = Kaushan_Script({
+  weight: "400",
+  subsets: ["latin"],
+  variable: "--font-kaushan",
+  display: 'swap',
+});
+
+const caveat = Caveat({
+  subsets: ["latin"],
+  variable: "--font-handwriting",
+  display: 'swap',
+});
+
 
 export const metadata: Metadata = {
   title: "Thérapie Club | Official Website",
@@ -33,7 +54,7 @@ export default async function RootLayout({
 
   return (
     <html lang={locale}>
-      <body className={`${syne.variable} ${inter.variable} antialiased`}>
+      <body className={`${syne.variable} ${inter.variable} ${pacifico.variable} ${kaushan.variable} ${caveat.variable} antialiased`}>
         <NextIntlClientProvider messages={messages}>
           {children}
         </NextIntlClientProvider>

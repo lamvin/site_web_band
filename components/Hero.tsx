@@ -1,43 +1,45 @@
-import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 
 export default function Hero() {
-    const t = useTranslations('Hero');
-
     return (
-        <div className="relative min-h-screen pt-36 flex items-center justify-center overflow-hidden bg-darlington">
-            {/* Background with overlay extending full screen under transparent navbar */}
-            <div className="absolute inset-0 z-0">
+        <section className="relative w-full aspect-[3/2] overflow-hidden bg-background">
+            {/* Full uncropped cover photo */}
+            <Image
+                src="/images/band/TC cover.jpg"
+                alt="TC Cover"
+                fill
+                className="object-cover object-center"
+                priority
+            />
+
+            {/* Pale pastel filter overlay */}
+            <div className="absolute inset-0 bg-gradient-to-b from-darlington/60 via-darlington/30 to-beeswax/70 pointer-events-none" />
+
+            {/* Retro film grain texture overlay matching reference image */}
+            <div className="absolute inset-0 bg-grain opacity-35 mix-blend-overlay pointer-events-none z-10" />
+
+            {/* Logo & Band Name superposed higher at top of photo (Logo left of Band Name) */}
+            <div className="absolute top-2 sm:top-4 md:top-6 lg:top-8 left-0 right-0 z-20 flex flex-row items-center justify-center gap-4 sm:gap-6 md:gap-8 px-4">
                 <Image
-                    src="/images/band/TC cover.jpg"
-                    alt="TC Cover"
-                    fill
-                    className="object-cover object-center"
+                    src="/images/band/logo_gold_green.png"
+                    alt="Thérapie Club Logo"
+                    width={140}
+                    height={140}
+                    className="h-12 sm:h-16 md:h-24 lg:h-28 w-auto object-contain drop-shadow-lg hover:scale-105 transition-transform duration-300"
                     priority
                 />
-                <div className="absolute inset-0 bg-gradient-to-b from-darlington/80 via-darlington/50 to-beeswax/80 z-10" />
-            </div>
-
-            <div className="relative z-20 text-center px-4 py-12">
-                <h1 className="text-6xl md:text-8xl font-black text-cafelatte tracking-tighter mb-4 animate-in fade-in zoom-in duration-1000 font-display drop-shadow-sm">
-                    THÉRAPIE<br />CLUB
+                <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-black uppercase tracking-widest text-[#2B583F] font-display drop-shadow-md text-center leading-none">
+                    THÉRAPIE CLUB
                 </h1>
-
-                <p className="text-xl md:text-2xl text-purple-950 mb-8 max-w-2xl mx-auto font-black tracking-widest uppercase drop-shadow-sm">
-                    {t.rich('subtitle', {
-                        br: () => <br />
-                    })}
-                </p>
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                    <button className="px-8 py-3 bg-purple-950 text-pastel-purple border-4 border-purple-950 font-black uppercase tracking-widest hover:bg-pastel-purple hover:text-purple-950 transition transform hover:scale-105 shadow-lg">
-                        {t('listen')}
-                    </button>
-                    <button className="px-8 py-3 bg-pastel-purple text-purple-950 border-4 border-purple-950 font-black uppercase tracking-widest hover:bg-purple-950 hover:text-pastel-purple transition transform hover:scale-105 shadow-lg">
-                        {t('tour')}
-                    </button>
-                </div>
             </div>
-        </div>
+        </section>
     );
 }
+
+
+
+
+
+
+
 
