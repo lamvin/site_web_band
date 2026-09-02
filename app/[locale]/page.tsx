@@ -1,5 +1,6 @@
 import Navbar from '../../components/Navbar';
 import Hero from '../../components/Hero';
+import ShowsSection from '../../components/ShowsSection';
 import NapkinSection from '../../components/NapkinSection';
 import Image from 'next/image';
 import { getTranslations } from 'next-intl/server';
@@ -12,6 +13,9 @@ export default async function Home() {
     <main className="bg-background min-h-screen text-foreground">
       <Navbar />
       <Hero />
+
+      {/* Shows Section (2nd place) */}
+      <ShowsSection />
 
       {/* Uncropped Background Image Section (Plaza) */}
       <section className="relative w-full aspect-[1500/938] overflow-hidden border-t-4 border-forest bg-background">
