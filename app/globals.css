@@ -2,26 +2,42 @@
 
 @theme {
   --color-background: #fdf8f6;
-  --color-foreground: #2B583F;
+  --color-foreground: #4A0E17;
 
-  --color-forest: #2B583F;
-  --color-darlington: #ACCAB2;
-  --color-beeswax: #ACCAB2;
-  --color-gold: #ACCAB2;
+  --color-forest: #4A0E17;
+  --color-burgundy: #4A0E17;
+  --color-darlington: #f5f0eb;
+  --color-beeswax: #f5f0eb;
+  --color-gold: #e6c594;
   --color-grenadine: #D44720;
-  --color-cafelatte: #2B583F;
+  --color-cafelatte: #4A0E17;
   --color-pastel-purple: #E6D7FF;
 
   --font-display: 'Syne', sans-serif;
   --font-body: 'Inter', sans-serif;
   --font-handwriting: var(--font-handwriting), 'Caveat', cursive;
+  --font-vintage: var(--font-vintage), 'Fraunces', serif;
 }
 
 .font-handwriting {
-  font-family: var(--font-handwriting), 'Caveat', cursive;
+  font-family: var(--font-handwriting), 'Caveat', cursive !important;
 }
 
+.font-vintage {
+  font-family: var(--font-vintage), 'Fraunces', serif !important;
+}
 
+.font-pacifico {
+  font-family: var(--font-pacifico), 'Pacifico', cursive !important;
+}
+
+.font-satisfy {
+  font-family: var(--font-satisfy), 'Satisfy', cursive !important;
+}
+
+.font-playfair {
+  font-family: var(--font-playfair), 'Playfair Display', serif !important;
+}
 
 /* Base Styles */
 body {
@@ -30,18 +46,7 @@ body {
   font-family: var(--font-body);
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: var(--font-display);
-  font-weight: 700;
-  text-transform: uppercase;
-}
-
-/* Retro Film Grain Overlay */
+/* High-Contrast Retro Film Grain Overlay */
 .bg-grain {
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='matrix' values='2.5 0 0 0 -0.75  0 2.5 0 0 -0.75  0 0 2.5 0 -0.75  0 0 0 1 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
 }

@@ -1,6 +1,63 @@
 import Image from 'next/image';
 
 export default function Hero() {
+    const socialLinks = [
+        {
+            name: 'Instagram',
+            url: '#',
+            icon: (
+                <svg className="w-5 h-5 sm:w-6 sm:h-6 fill-current" viewBox="0 0 24 24">
+                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+                </svg>
+            ),
+        },
+        {
+            name: 'Spotify',
+            url: '#',
+            icon: (
+                <svg className="w-5 h-5 sm:w-6 sm:h-6 fill-current" viewBox="0 0 24 24">
+                    <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.48-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141 4.38-1.32 9.78-.66 13.44 1.56.42.24.6.84.301 1.261zm.12-3.36C15.241 8.4 8.82 8.16 5.16 9.301c-.6.18-1.2-.18-1.38-.72-.18-.6.18-1.2.72-1.38 4.26-1.26 11.28-1.02 15.721 1.62.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z" />
+                </svg>
+            ),
+        },
+        {
+            name: 'Apple Music',
+            url: '#',
+            icon: (
+                <svg className="w-5 h-5 sm:w-6 sm:h-6 fill-current" viewBox="0 0 24 24">
+                    <path d="M23.994 6.124a9.23 9.23 0 00-.327-2.078 4.09 4.09 0 00-.97-1.706 4.14 4.14 0 00-1.716-.957 9.176 9.176 0 00-2.077-.318C17.39.014 16.906 0 12.002 0c-4.904 0-5.39.014-6.902.065A9.23 9.23 0 003.02.383 4.14 4.14 0 001.306 1.34 4.09 4.09 0 00.336 3.046 9.176 9.176 0 00.018 5.123C0 6.634 0 7.12 0 12.024c0 4.904.014 5.39.065 6.902.051.815.176 1.568.318 2.077a4.14 4.14 0 00.97 1.716 4.09 4.09 0 001.706.957 9.176 9.176 0 002.078.318c1.512.051 1.998.065 6.902.065 4.904 0 5.39-.014 6.902-.065a9.23 9.23 0 002.077-.318 4.14 4.14 0 001.716-.957 4.09 4.09 0 00.957-1.706 9.176 9.176 0 00.318-2.077c.051-1.512.065-1.998.065-6.902 0-4.904-.014-5.39-.065-6.902zM18.75 14.73c-1.39 0-2.52-1.13-2.52-2.52s1.13-2.52 2.52-2.52 2.52 1.13 2.52 2.52-1.13 2.52-1.85 2.52zm-6.75-2.73c0-3.31 2.69-6 6-6v2.25c-2.07 0-3.75 1.68-3.75 3.75S15.93 15.75 18 15.75v2.25c-3.31 0-6-2.69-6-6z" />
+                </svg>
+            ),
+        },
+        {
+            name: 'YouTube',
+            url: '#',
+            icon: (
+                <svg className="w-5 h-5 sm:w-6 sm:h-6 fill-current" viewBox="0 0 24 24">
+                    <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+                </svg>
+            ),
+        },
+        {
+            name: 'TikTok',
+            url: '#',
+            icon: (
+                <svg className="w-5 h-5 sm:w-6 sm:h-6 fill-current" viewBox="0 0 24 24">
+                    <path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.83.57-1.35 1.55-1.34 2.56.01.99.55 1.93 1.39 2.45.82.52 1.9.59 2.76.19.84-.38 1.44-1.22 1.56-2.14.04-1.35.02-2.71.02-4.06V.02z" />
+                </svg>
+            ),
+        },
+        {
+            name: 'Facebook',
+            url: '#',
+            icon: (
+                <svg className="w-5 h-5 sm:w-6 sm:h-6 fill-current" viewBox="0 0 24 24">
+                    <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+                </svg>
+            ),
+        },
+    ];
+
     return (
         <section className="relative w-full aspect-[3/2] overflow-hidden bg-background">
             {/* Full uncropped cover photo */}
@@ -12,34 +69,40 @@ export default function Hero() {
                 priority
             />
 
-            {/* Pale pastel filter overlay */}
-            <div className="absolute inset-0 bg-gradient-to-b from-darlington/60 via-darlington/30 to-beeswax/70 pointer-events-none" />
+            {/* Subtle top & bottom gradient overlays for readability */}
+            <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-transparent to-black/60 pointer-events-none" />
 
-            {/* Retro film grain texture overlay matching reference image */}
-            <div className="absolute inset-0 bg-grain opacity-35 mix-blend-overlay pointer-events-none z-10" />
-
-            {/* Logo & Band Name superposed higher at top of photo (Logo left of Band Name) */}
-            <div className="absolute top-2 sm:top-4 md:top-6 lg:top-8 left-0 right-0 z-20 flex flex-row items-center justify-center gap-4 sm:gap-6 md:gap-8 px-4">
+            {/* Logo & Band Name superposed on the top-left of photo */}
+            <div className="absolute top-3 sm:top-5 md:top-7 lg:top-8 left-4 sm:left-8 md:left-12 lg:left-16 right-4 sm:right-8 z-20 flex flex-row items-center justify-start gap-3 sm:gap-4 md:gap-6">
                 <Image
-                    src="/images/band/logo_gold_green.png"
+                    src="/images/band/logo blanc.png"
                     alt="Thérapie Club Logo"
-                    width={140}
-                    height={140}
-                    className="h-12 sm:h-16 md:h-24 lg:h-28 w-auto object-contain drop-shadow-lg hover:scale-105 transition-transform duration-300"
+                    width={120}
+                    height={120}
+                    className="h-8 sm:h-11 md:h-14 lg:h-18 w-auto object-contain drop-shadow-md hover:scale-105 transition-transform duration-300"
                     priority
                 />
-                <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-black uppercase tracking-widest text-[#2B583F] font-display drop-shadow-md text-center leading-none">
+                <h1
+                    style={{ fontFamily: 'var(--font-vintage), "Fraunces", serif' }}
+                    className="text-xl sm:text-3xl md:text-4xl lg:text-5xl font-black uppercase tracking-widest text-[#f5f0eb] drop-shadow-md leading-none"
+                >
                     THÉRAPIE CLUB
                 </h1>
+            </div>
+
+            {/* Social Media Links at the Bottom Left */}
+            <div className="absolute bottom-3 sm:bottom-6 md:bottom-8 lg:bottom-10 left-4 sm:left-8 md:left-12 lg:left-16 z-20 flex flex-row items-center gap-3 sm:gap-4 md:gap-5">
+                {socialLinks.map((item) => (
+                    <a
+                        key={item.name}
+                        href={item.url}
+                        aria-label={item.name}
+                        className="text-[#f5f0eb]/90 hover:text-white hover:scale-125 transition-all duration-300 drop-shadow-lg"
+                    >
+                        {item.icon}
+                    </a>
+                ))}
             </div>
         </section>
     );
 }
-
-
-
-
-
-
-
-
