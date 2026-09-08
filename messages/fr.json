@@ -19,10 +19,13 @@
     "noReleases": "Aucune sortie trouvée."
   },
   "Napkin": {
-    "title": "Lorem Ipsum",
-    "note": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    "subtext": "Ut enim ad minim veniam, quis nostrud exercitation.",
-    "signature": "— Lorem Ipsum ♡"
+    "title": "Thérapie Club, c’est cet espace entre les deux.",
+    "line1": "Entre le nightclub et la retraite de yoga.",
+    "line2": "Entre le hookup et le grand amour.",
+    "line3": "Entre le cocktail et la tisane.",
+    "line4": "Entre l’excès et le mieux-être.",
+    "body": "Parce qu’on est peut-être nombreux à vivre comme ça. À chercher la paix intérieure avec un verre à la main. À vouloir décrocher de notre téléphone tout en attendant désespérément une notification. À vouloir une relation saine tout en étant attiré par ce qui nous fait perdre la tête. À faire du développement personnel le dimanche et à refaire les mêmes conneries le samedi soir.",
+    "welcome": "Bienvenue dans le club ;)"
   },
   "Footer": {
     "rights": "Tous droits réservés."

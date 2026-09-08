@@ -39,6 +39,18 @@
   font-family: var(--font-playfair), 'Playfair Display', serif !important;
 }
 
+.font-kaushan {
+  font-family: var(--font-kaushan), 'Kaushan Script', cursive !important;
+}
+
+.font-kalam {
+  font-family: var(--font-kalam), 'Kalam', cursive !important;
+}
+
+.font-covered {
+  font-family: var(--font-covered), 'Covered By Your Grace', cursive !important;
+}
+
 /* Base Styles */
 body {
   background-color: var(--color-background);

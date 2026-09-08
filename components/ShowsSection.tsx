@@ -43,7 +43,7 @@ export default function ShowsSection() {
   const t = useTranslations('Home');
 
   return (
-    <section id="shows" className="relative w-full py-20 px-4 sm:px-8 md:px-12 bg-[#4A0E17] text-[#f5f0eb] overflow-hidden border-t-4 border-[#350A14]">
+    <section id="shows" className="relative w-full py-20 px-4 sm:px-8 md:px-12 bg-[#4A0E17] text-[#f5f0eb] overflow-hidden">
       {/* Texture Grain Overlay */}
       <div className="absolute inset-0 bg-grain opacity-35 mix-blend-overlay pointer-events-none z-10" />
 

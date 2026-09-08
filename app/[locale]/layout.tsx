@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Syne, Inter, Pacifico, Kaushan_Script, Caveat, Fraunces, Playfair_Display, Satisfy } from "next/font/google";
+import { Syne, Inter, Pacifico, Kaushan_Script, Caveat, Fraunces, Playfair_Display, Satisfy, Kalam, Covered_By_Your_Grace } from "next/font/google";
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages } from 'next-intl/server';
 import "../globals.css";
@@ -55,6 +55,20 @@ const satisfy = Satisfy({
   display: 'swap',
 });
 
+const kalam = Kalam({
+  weight: ["300", "400", "700"],
+  subsets: ["latin"],
+  variable: "--font-kalam",
+  display: 'swap',
+});
+
+const covered = Covered_By_Your_Grace({
+  weight: "400",
+  subsets: ["latin"],
+  variable: "--font-covered",
+  display: 'swap',
+});
+
 export const metadata: Metadata = {
   title: "Thérapie Club | Official Website",
   description: "Official website of Thérapie Club",
@@ -72,7 +86,7 @@ export default async function RootLayout({
 
   return (
     <html lang={locale}>
-      <body className={`${syne.variable} ${inter.variable} ${pacifico.variable} ${kaushan.variable} ${caveat.variable} ${fraunces.variable} ${playfair.variable} ${satisfy.variable} antialiased`}>
+      <body className={`${syne.variable} ${inter.variable} ${pacifico.variable} ${kaushan.variable} ${caveat.variable} ${fraunces.variable} ${playfair.variable} ${satisfy.variable} ${kalam.variable} ${covered.variable} antialiased`}>
         <NextIntlClientProvider messages={messages}>
           {children}
         </NextIntlClientProvider>
