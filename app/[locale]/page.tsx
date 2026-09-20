@@ -2,6 +2,7 @@ import Navbar from '../../components/Navbar';
 import Hero from '../../components/Hero';
 import ShowsSection from '../../components/ShowsSection';
 import NapkinSection from '../../components/NapkinSection';
+import ContactSection from '../../components/ContactSection';
 import Image from 'next/image';
 import { getTranslations } from 'next-intl/server';
 
@@ -28,22 +29,19 @@ export default async function Home() {
         />
 
         {/* Pancarte Rouge embedded on the left side of the plaza picture */}
-        <div className="absolute bottom-0 left-4 sm:left-8 md:left-12 lg:left-16 top-6 sm:top-10 md:top-12 lg:top-16 z-30 flex items-end">
+        <div className="absolute bottom-0 left-2 sm:left-6 md:left-12 lg:left-16 top-4 sm:top-8 md:top-12 lg:top-16 z-30 flex items-end">
           <Image
             src="/images/band/pancarte rouge.png"
             alt="Thérapie Club Sign"
             width={350}
             height={1040}
-            className="h-[75%] sm:h-[82%] md:h-[88%] lg:h-[92%] w-auto object-contain object-left-bottom drop-shadow-[0_10px_20px_rgba(0,0,0,0.6)] hover:scale-105 transition-transform duration-300"
+            className="h-[88%] sm:h-[86%] md:h-[88%] lg:h-[92%] w-auto object-contain object-left-bottom drop-shadow-[0_10px_20px_rgba(0,0,0,0.6)] hover:scale-105 transition-transform duration-300"
             priority
           />
         </div>
 
-        {/* Lighter film grain texture overlay on top of background and sign */}
-        <div className="absolute inset-0 bg-grain opacity-30 mix-blend-overlay pointer-events-none z-40" />
-
-        {/* Side-by-side Singles centered in the Plaza section */}
-        <div className="absolute inset-0 z-50 max-w-7xl mx-auto flex items-center justify-center p-4 sm:p-6 md:p-12 gap-6 sm:gap-10 md:gap-14">
+        {/* Side-by-side Singles — shifted right on small screens so the sign stays visible */}
+        <div className="absolute inset-0 z-40 flex items-center justify-end lg:justify-center pl-[22%] pr-2.5 sm:pl-[20%] sm:pr-5 md:pl-[18%] md:pr-8 lg:px-12 gap-2.5 sm:gap-5 md:gap-8 lg:gap-12">
           {[
             {
               title: 'Cash Flow',
@@ -56,39 +54,32 @@ export default async function Home() {
               link: '#',
             },
           ].map((single) => (
-            <div
+            <a
               key={single.title}
-              className="group flex flex-col items-center justify-center space-y-2 sm:space-y-3 hover:scale-105 transition-transform duration-300"
+              href={single.link}
+              aria-label={`${single.title} — ${t('stream')}`}
+              className="@container/single group relative w-[8.5rem] sm:w-48 md:w-64 lg:w-80 aspect-square overflow-hidden drop-shadow-2xl shadow-xl border-2 border-white/20 hover:scale-105 transition-transform duration-300"
             >
-              {/* Bigger Pure Thumbnail Picture */}
-              <div className="relative w-44 sm:w-64 md:w-80 lg:w-96 aspect-square overflow-hidden drop-shadow-2xl shadow-xl border-2 sm:border-3 border-white/20">
-                <Image
-                  src={single.cover}
-                  alt={single.title}
-                  fill
-                  className="object-cover object-center group-hover:scale-105 transition-transform duration-500"
-                />
-              </div>
-
-              {/* Red Box under the picture containing Name & Stream Button */}
-              <div className="w-full bg-[#4A0E17] border-2 border-[#4A0E17] shadow-lg py-2.5 px-4 sm:py-3.5 sm:px-6 flex flex-col items-center justify-center space-y-1.5 sm:space-y-2 text-center">
-                <h3 className="text-sm sm:text-xl md:text-2xl font-black uppercase text-[#f5f0eb] font-display tracking-wider truncate max-w-full">
+              <Image
+                src={single.cover}
+                alt={single.title}
+                fill
+                className="object-cover object-center group-hover:scale-105 transition-transform duration-500"
+              />
+              <div className="absolute inset-x-0 bottom-0 z-10 bg-gradient-to-t from-black/80 via-black/35 to-transparent pt-12 pb-2 px-2 sm:pb-3 text-center">
+                <h3 className="text-[length:clamp(0.55rem,7.6cqi,1.65rem)] font-black uppercase text-[#f5f0eb] font-display leading-none whitespace-nowrap drop-shadow-[0_1px_3px_rgba(0,0,0,0.85)]">
                   {single.title}
                 </h3>
-                <a
-                  href={single.link}
-                  className="bg-[#f5f0eb] text-[#4A0E17] px-4 sm:px-6 py-1 sm:py-1.5 font-black uppercase tracking-widest hover:bg-[#e6c594] transition-colors border border-[#f5f0eb] text-xs sm:text-sm shadow-md"
-                >
-                  {t('stream')}
-                </a>
               </div>
-            </div>
+            </a>
           ))}
         </div>
       </section>
 
       {/* Bar Napkin Section */}
       <NapkinSection />
+
+      <ContactSection />
 
       <footer className="py-12 text-center text-background bg-forest">
         <p className="font-bold uppercase tracking-widest">&copy; {new Date().getFullYear()} Thérapie Club. {tFooter('rights')}</p>

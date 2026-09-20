@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import { useTranslations } from 'next-intl';
 
 interface ShowItem {
@@ -44,8 +45,17 @@ export default function ShowsSection() {
 
   return (
     <section id="shows" className="relative w-full py-20 px-4 sm:px-8 md:px-12 bg-[#4A0E17] text-[#f5f0eb] overflow-hidden">
-      {/* Texture Grain Overlay */}
-      <div className="absolute inset-0 bg-grain opacity-35 mix-blend-overlay pointer-events-none z-10" />
+      <Image
+        src="/images/band/velvet-curtain.jpg"
+        alt=""
+        fill
+        className="object-cover object-center"
+        sizes="100vw"
+        priority
+      />
+      {/* Shift the bright stage red toward the site burgundy and keep type readable. */}
+      <div className="absolute inset-0 bg-[#4A0E17]/55 mix-blend-multiply pointer-events-none" />
+      <div className="absolute inset-0 bg-black/25 pointer-events-none" />
 
       <div className="relative z-20 max-w-5xl mx-auto flex flex-col items-center">
         {/* Section Heading */}
@@ -64,7 +74,7 @@ export default function ShowsSection() {
               className="flex flex-col md:flex-row items-center justify-between border-b border-[#f5f0eb]/20 py-5 sm:py-6 px-4 sm:px-6 rounded-none hover:bg-white/10 transition-colors gap-4"
             >
               <div className="flex flex-col md:flex-row items-center md:items-start gap-2 md:gap-8 text-center md:text-left">
-                <span className="font-display font-black text-xl sm:text-2xl text-[#e6c594] tracking-widest uppercase min-w-[140px]">
+                <span className="font-display font-black text-xl sm:text-2xl text-white tracking-widest uppercase min-w-[140px]">
                   {show.date}
                 </span>
                 <div>

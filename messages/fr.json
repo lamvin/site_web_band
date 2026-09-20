@@ -27,6 +27,14 @@
     "body": "Parce qu’on est peut-être nombreux à vivre comme ça. À chercher la paix intérieure avec un verre à la main. À vouloir décrocher de notre téléphone tout en attendant désespérément une notification. À vouloir une relation saine tout en étant attiré par ce qui nous fait perdre la tête. À faire du développement personnel le dimanche et à refaire les mêmes conneries le samedi soir.",
     "welcome": "Bienvenue dans le club ;)"
   },
+  "Contact": {
+    "title": "Contact",
+    "subtitle": "Booking & presse",
+    "body": "Écrivez-nous pour le booking, la presse, ou tout le reste.",
+    "cta": "Écrire",
+    "email": "hello@therapieclub.com",
+    "photoAlt": "Thérapie Club dans le salon"
+  },
   "Footer": {
     "rights": "Tous droits réservés."
   }

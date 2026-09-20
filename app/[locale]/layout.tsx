@@ -70,9 +70,13 @@ const covered = Covered_By_Your_Grace({
 });
 
 export const metadata: Metadata = {
-  title: "Thérapie Club | Official Website",
-  description: "Official website of Thérapie Club",
+  title: "Thérapie Club | Site officiel",
+  description: "Site officiel de Thérapie Club",
 };
+
+export function generateStaticParams() {
+  return [{ locale: 'fr' }];
+}
 
 export default async function RootLayout({
   children,
@@ -81,11 +85,11 @@ export default async function RootLayout({
   children: React.ReactNode;
   params: Promise<{ locale: string }>;
 }>) {
-  const { locale } = await params;
+  await params;
   const messages = await getMessages();
 
   return (
-    <html lang={locale}>
+    <html lang="fr">
       <body className={`${syne.variable} ${inter.variable} ${pacifico.variable} ${kaushan.variable} ${caveat.variable} ${fraunces.variable} ${playfair.variable} ${satisfy.variable} ${kalam.variable} ${covered.variable} antialiased`}>
         <NextIntlClientProvider messages={messages}>
           {children}
