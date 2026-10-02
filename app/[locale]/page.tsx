@@ -28,49 +28,42 @@ export default async function Home() {
           priority
         />
 
-        {/* Pancarte Rouge embedded on the left side of the plaza picture */}
-        <div className="absolute bottom-0 left-2 sm:left-6 md:left-12 lg:left-16 top-4 sm:top-8 md:top-12 lg:top-16 z-30 flex items-end">
-          <Image
-            src="/images/band/pancarte rouge.png"
-            alt="Thérapie Club Sign"
-            width={350}
-            height={1040}
-            className="h-[88%] sm:h-[86%] md:h-[88%] lg:h-[92%] w-auto object-contain object-left-bottom drop-shadow-[0_10px_20px_rgba(0,0,0,0.6)] hover:scale-105 transition-transform duration-300"
-            priority
-          />
-        </div>
-
-        {/* Side-by-side Singles — shifted right on small screens so the sign stays visible */}
-        <div className="absolute inset-0 z-40 flex items-center justify-end lg:justify-center pl-[22%] pr-2.5 sm:pl-[20%] sm:pr-5 md:pl-[18%] md:pr-8 lg:px-12 gap-2.5 sm:gap-5 md:gap-8 lg:gap-12">
+        {/* Side-by-side singles, centered on the plaza */}
+        <div className="absolute inset-0 z-20 flex items-center justify-center px-4 sm:px-8 md:px-12 gap-4 sm:gap-8 md:gap-12 lg:gap-16">
           {[
             {
               title: 'Cash Flow',
-              cover: '/images/band/Cash Flow thumb.jpeg',
+              cover: '/images/band/Cash Flow thumb.jpg',
               link: '#',
+              showTitle: false,
             },
             {
               title: 'Fake le Fun',
               cover: '/images/band/Fake le Fun thumb.jpg',
               link: '#',
+              showTitle: true,
             },
           ].map((single) => (
             <a
               key={single.title}
               href={single.link}
               aria-label={`${single.title} — ${t('stream')}`}
-              className="@container/single group relative w-[8.5rem] sm:w-48 md:w-64 lg:w-80 aspect-square overflow-hidden drop-shadow-2xl shadow-xl border-2 border-white/20 hover:scale-105 transition-transform duration-300"
+              className="@container/single group relative w-36 sm:w-52 md:w-72 lg:w-96 aspect-square overflow-hidden drop-shadow-2xl shadow-xl border-2 border-white/20 hover:scale-105 transition-transform duration-300"
             >
               <Image
                 src={single.cover}
                 alt={single.title}
                 fill
+                sizes="(max-width: 639px) 9rem, (max-width: 767px) 13rem, (max-width: 1023px) 18rem, 24rem"
                 className="object-cover object-center group-hover:scale-105 transition-transform duration-500"
               />
-              <div className="absolute inset-x-0 bottom-0 z-10 bg-gradient-to-t from-black/80 via-black/35 to-transparent pt-12 pb-2 px-2 sm:pb-3 text-center">
-                <h3 className="text-[length:clamp(0.55rem,7.6cqi,1.65rem)] font-black uppercase text-[#f5f0eb] font-display leading-none whitespace-nowrap drop-shadow-[0_1px_3px_rgba(0,0,0,0.85)]">
-                  {single.title}
-                </h3>
-              </div>
+              {single.showTitle && (
+                <div className="absolute inset-x-0 bottom-0 z-10 bg-gradient-to-t from-black/80 via-black/35 to-transparent pt-12 pb-2 px-2 sm:pb-3 text-center">
+                  <h3 className="text-[length:clamp(0.55rem,7.6cqi,1.65rem)] font-black uppercase text-[#f5f0eb] font-display leading-none whitespace-nowrap drop-shadow-[0_1px_3px_rgba(0,0,0,0.85)]">
+                    {single.title}
+                  </h3>
+                </div>
+              )}
             </a>
           ))}
         </div>

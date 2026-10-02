@@ -12,32 +12,12 @@ interface ShowItem {
 const sampleShows: ShowItem[] = [
   {
     id: '1',
-    date: '18 OCT 2026',
-    venue: 'MTELUS',
+    date: '18 DEC 2026',
+    venue: "Le P'tit Bar",
     city: 'Montréal, QC',
     ticketLink: '#',
   },
-  {
-    id: '2',
-    date: '24 OCT 2026',
-    venue: "L'Impérial Bell",
-    city: 'Québec, QC',
-    ticketLink: '#',
-  },
-  {
-    id: '3',
-    date: '07 NOV 2026',
-    venue: 'Théâtre Granada',
-    city: 'Sherbrooke, QC',
-    ticketLink: '#',
-  },
-  {
-    id: '4',
-    date: '20 NOV 2026',
-    venue: 'Le National',
-    city: 'Ottawa, ON',
-    ticketLink: '#',
-  },
+
 ];
 
 export default function ShowsSection() {
