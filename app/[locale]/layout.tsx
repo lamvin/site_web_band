@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Syne, Inter, Pacifico, Kaushan_Script, Caveat, Fraunces, Playfair_Display, Satisfy, Kalam, Covered_By_Your_Grace } from "next/font/google";
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages } from 'next-intl/server';
+import { Analytics } from '@vercel/analytics/next';
 import "../globals.css";
 
 const syne = Syne({
@@ -94,6 +95,7 @@ export default async function RootLayout({
         <NextIntlClientProvider messages={messages}>
           {children}
         </NextIntlClientProvider>
+        <Analytics />
       </body>
     </html>
   );
