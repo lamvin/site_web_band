@@ -41,7 +41,7 @@ export default function ShowsSection() {
         {/* Section Heading */}
         <h2
           style={{ fontFamily: 'var(--font-vintage), "Fraunces", serif' }}
-          className="text-4xl sm:text-5xl md:text-6xl font-black uppercase tracking-widest text-[#f5f0eb] mb-12 text-center drop-shadow-md"
+          className="text-xl sm:text-3xl md:text-4xl lg:text-5xl font-black uppercase tracking-widest text-[#f5f0eb] mb-12 text-center drop-shadow-md leading-none"
         >
           {t('upcomingShows')}
         </h2>
@@ -54,7 +54,10 @@ export default function ShowsSection() {
               className="flex flex-col md:flex-row items-center justify-between border-b border-[#f5f0eb]/20 py-5 sm:py-6 px-4 sm:px-6 rounded-none hover:bg-white/10 transition-colors gap-4"
             >
               <div className="flex flex-col md:flex-row items-center md:items-start gap-2 md:gap-8 text-center md:text-left">
-                <span className="font-display font-black text-xl sm:text-2xl text-white tracking-widest uppercase min-w-[140px]">
+                <span
+                  style={{ fontFamily: 'var(--font-vintage), "Fraunces", serif' }}
+                  className="font-black text-xl sm:text-3xl md:text-4xl lg:text-5xl text-[#f5f0eb] tracking-widest uppercase leading-none whitespace-nowrap"
+                >
                   {show.date}
                 </span>
                 <div>
