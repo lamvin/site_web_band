@@ -29,10 +29,10 @@
   },
   "Contact": {
     "title": "Contact",
-    "subtitle": "Booking & presse",
-    "body": "Écrivez-nous pour le booking, la presse, ou tout le reste.",
+    "subtitle": "",
+    "body": "",
     "cta": "Écrire",
-    "email": "hello@therapieclub.com",
+    "email": "info@therapieclub.com",
     "photoAlt": "Thérapie Club dans le salon"
   },
   "Footer": {

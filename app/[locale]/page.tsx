@@ -32,7 +32,7 @@ export default async function Home() {
           <a
             href="#"
             aria-label={`Cash Flow — ${t('stream')}`}
-            className="group relative w-36 sm:w-52 md:w-72 lg:w-96 aspect-square overflow-hidden drop-shadow-2xl shadow-xl border-2 border-white/20 hover:scale-105 transition-transform duration-300"
+            className="group relative w-[13.5rem] sm:w-[19.5rem] md:w-[27rem] lg:w-[36rem] aspect-square overflow-hidden drop-shadow-2xl shadow-xl border-2 border-white/20 hover:scale-105 transition-transform duration-300"
           >
             <Image
               src="/images/band/Cash Flow thumb.jpg"

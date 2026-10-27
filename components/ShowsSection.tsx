@@ -24,7 +24,7 @@ export default function ShowsSection() {
   const t = useTranslations('Home');
 
   return (
-    <section id="shows" className="relative w-full py-20 px-4 sm:px-8 md:px-12 bg-[#4A0E17] text-[#f5f0eb] overflow-hidden">
+    <section id="shows" className="relative w-full min-h-[150vh] py-20 px-4 sm:px-8 md:px-12 bg-[#4A0E17] text-[#f5f0eb] overflow-hidden flex flex-col justify-center">
       <Image
         src="/images/band/velvet-curtain.jpg"
         alt=""
@@ -69,13 +69,6 @@ export default function ShowsSection() {
                   </p>
                 </div>
               </div>
-
-              <a
-                href={show.ticketLink}
-                className="bg-[#f5f0eb] text-[#4A0E17] hover:bg-[#e6c594] px-6 py-2.5 font-black uppercase text-xs sm:text-sm tracking-widest transition-all duration-200 border-2 border-[#f5f0eb] shadow-md hover:scale-105 rounded-none"
-              >
-                {t('tickets')}
-              </a>
             </div>
           ))}
         </div>
