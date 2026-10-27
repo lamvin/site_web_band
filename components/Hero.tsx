@@ -114,6 +114,8 @@ export default function Hero() {
                     <a
                         key={item.name}
                         href={item.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
                         aria-label={item.name}
                         className="text-[#f5f0eb]/90 hover:text-white hover:scale-125 transition-all duration-300 drop-shadow-lg"
                     >

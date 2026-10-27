@@ -24,7 +24,7 @@ export default function ShowsSection() {
   const t = useTranslations('Home');
 
   return (
-    <section id="shows" className="relative w-full min-h-[150vh] py-20 px-4 sm:px-8 md:px-12 bg-[#4A0E17] text-[#f5f0eb] overflow-hidden flex flex-col justify-center">
+    <section id="shows" className="relative w-full min-h-[28.125vh] md:min-h-[112.5vh] py-8 md:py-20 px-4 sm:px-8 md:px-12 bg-[#4A0E17] text-[#f5f0eb] overflow-hidden flex flex-col justify-center">
       <Image
         src="/images/band/velvet-curtain.jpg"
         alt=""
