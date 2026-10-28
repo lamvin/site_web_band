@@ -37,6 +37,7 @@ export default function NapkinSection() {
           src="/images/band/bar.jpeg"
           alt="Serviette de bar"
           fill
+          unoptimized
           className="object-cover object-center"
           priority
         />
@@ -53,7 +54,7 @@ export default function NapkinSection() {
             rotate: NAPKIN.rotate,
           }}
         >
-          <div className="h-full text-center text-[#1a120e]">
+          <div className="h-full pt-[3%] text-center text-[#1a120e]">
             <div
               className="float-left h-full w-1/2"
               style={{ shapeOutside: DIAMOND_LEFT, shapeMargin: '4%' }}
@@ -63,18 +64,18 @@ export default function NapkinSection() {
               style={{ shapeOutside: DIAMOND_RIGHT, shapeMargin: '4%' }}
             />
 
-            <h3 className="font-satisfy text-[4.6cqi] leading-[1.15] mb-[0.25em]">
+            <h3 className="font-satisfy text-[4.6cqi] leading-[1.28] mb-[0.42em]">
               {t('title')}
             </h3>
 
-            <p className="font-satisfy text-[3.35cqi] leading-[1.25]">{t('line1')}</p>
-            <p className="font-satisfy text-[3.35cqi] leading-[1.25]">{t('line2')}</p>
-            <p className="font-satisfy text-[3.35cqi] leading-[1.25]">{t('line3')}</p>
-            <p className="font-satisfy text-[3.35cqi] leading-[1.25] mb-[0.35em]">
+            <p className="font-satisfy text-[3.35cqi] leading-[1.42]">{t('line1')}</p>
+            <p className="font-satisfy text-[3.35cqi] leading-[1.42]">{t('line2')}</p>
+            <p className="font-satisfy text-[3.35cqi] leading-[1.42]">{t('line3')}</p>
+            <p className="font-satisfy text-[3.35cqi] leading-[1.42] mb-[0.55em]">
               {t('line4')}
             </p>
 
-            <p className="font-satisfy text-[2.3cqi] leading-[1.35] mb-[0.45em]">
+            <p className="font-satisfy text-[2.3cqi] leading-[1.48] mb-[0.6em]">
               {t('body')}
             </p>
 

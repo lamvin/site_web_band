@@ -8,7 +8,6 @@ import { getTranslations } from 'next-intl/server';
 
 export default async function Home() {
   const t = await getTranslations('Home');
-  const tFooter = await getTranslations('Footer');
 
   return (
     <main className="bg-background min-h-screen text-foreground">
@@ -29,20 +28,28 @@ export default async function Home() {
         />
 
         <div className="absolute inset-0 z-20 flex items-center justify-center px-4">
-          <a
-            href="#"
-            aria-label={`Cash Flow — ${t('stream')}`}
-            className="group relative w-[13.5rem] sm:w-[19.5rem] md:w-[27rem] lg:w-[36rem] aspect-square overflow-hidden drop-shadow-2xl shadow-xl border-2 border-white/20 hover:scale-105 transition-transform duration-300"
-          >
-            <Image
-              src="/images/band/Cash Flow thumb.jpg"
-              alt="Cash Flow"
-              fill
-              unoptimized
-              priority
-              className="object-cover object-center group-hover:scale-105 transition-transform duration-500"
-            />
-          </a>
+          <div className="flex flex-col items-center gap-2 sm:gap-3 md:gap-4">
+            <p
+              style={{ fontFamily: 'var(--font-vintage), "Fraunces", serif' }}
+              className="font-black text-[2.025rem] sm:text-[2.53125rem] md:text-[3.0375rem] lg:text-[3.796875rem] uppercase tracking-widest leading-none text-[#f5f0eb] drop-shadow-md text-center -translate-y-2"
+            >
+              Premier single
+            </p>
+            <a
+              href="#"
+              aria-label={`Cash Flow — ${t('stream')}`}
+              className="group relative w-[8rem] sm:w-[16.5rem] md:w-[23rem] lg:w-[30.5rem] aspect-square overflow-hidden drop-shadow-2xl shadow-xl hover:scale-105 transition-transform duration-300"
+            >
+              <Image
+                src="/images/band/Cash Flow thumb.jpg"
+                alt="Cash Flow"
+                fill
+                unoptimized
+                priority
+                className="object-cover object-center group-hover:scale-105 transition-transform duration-500"
+              />
+            </a>
+          </div>
         </div>
       </section>
 
@@ -50,10 +57,6 @@ export default async function Home() {
       <NapkinSection />
 
       <ContactSection />
-
-      <footer className="py-12 text-center text-background bg-forest">
-        <p className="font-bold uppercase tracking-widest">&copy; {new Date().getFullYear()} Thérapie Club. {tFooter('rights')}</p>
-      </footer>
     </main>
   );
 }

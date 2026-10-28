@@ -51,7 +51,7 @@ export default function ShowsSection() {
           {sampleShows.map((show) => (
             <div
               key={show.id}
-              className="flex flex-col md:flex-row items-center justify-between border-b border-[#f5f0eb]/20 py-5 sm:py-6 px-4 sm:px-6 rounded-none hover:bg-white/10 transition-colors gap-4"
+              className="flex flex-col md:flex-row items-center justify-between py-5 sm:py-6 px-4 sm:px-6 rounded-none hover:bg-white/10 transition-colors gap-4"
             >
               <div className="flex flex-col md:flex-row items-center md:items-start gap-2 md:gap-8 text-center md:text-left">
                 <span
