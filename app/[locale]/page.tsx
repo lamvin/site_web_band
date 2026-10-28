@@ -31,7 +31,7 @@ export default async function Home() {
           <div className="flex flex-col items-center gap-2 sm:gap-3 md:gap-4">
             <p
               style={{ fontFamily: 'var(--font-vintage), "Fraunces", serif' }}
-              className="font-black text-[2.025rem] sm:text-[2.53125rem] md:text-[3.0375rem] lg:text-[3.796875rem] uppercase tracking-widest leading-none text-[#f5f0eb] drop-shadow-md text-center -translate-y-2"
+              className="font-black text-xl sm:text-3xl md:text-4xl lg:text-5xl uppercase tracking-widest leading-none text-[#f5f0eb] drop-shadow-md text-center -translate-y-2"
             >
               Premier single
             </p>
